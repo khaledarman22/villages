@@ -1,0 +1,43 @@
+name: villages
+
+description: A new Flutter project.
+
+publish_to: none
+
+version: 1.0.0+1
+
+environment:
+    sdk: '>=2.18.5 <3.0.0'
+
+dependencies:
+    flutter:
+        sdk: flutter
+    cupertino_icons: ^1.0.5
+    ## provider to manage the state
+    provider: ^6.0.5 
+    ## sizer to manage screen
+    responsive_sizer: ^3.1.1
+    ## svg
+    flutter_svg: ^1.1.6
+    ## carousel
+    carousel_slider: ^4.2.1
+
+dev_dependencies:
+    flutter_test:
+        sdk: flutter
+    flutter_lints: ^2.0.1
+
+    
+flutter:
+    uses-material-design: true
+    ## set assets
+    assets:
+        - assets/images/
+    fonts:
+    - family: Segoe UI
+      fonts:
+        - asset: assets/fonts/Segoe UI.ttf
+        - asset: assets/fonts/Segoe UI Italic.ttf
+        - asset: assets/fonts/Segoe UI Bold.ttf
+        - asset: assets/fonts/Segoe UI Bold Italic.ttf
+
