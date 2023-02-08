@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -6,6 +5,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:villages/assets/assets.dart';
 import 'package:villages/assets/colors.dart';
 import 'package:villages/router/router.dart';
+import 'package:villages/shared/views/components/nav_bar_item.dart';
 import 'package:villages/views/services_main_screen/components/services_card_widget.dart';
 import 'package:villages/views/services_main_screen/components/village_info_widget.dart';
 
@@ -74,40 +74,54 @@ class _ServicesMainScreenState extends State<ServicesMainScreen> {
                     18,
                   ),
                   height: isPortrait ? 7.h : 14.h,
-                  child: TextField(
-                    textDirection: TextDirection.rtl,
-                    keyboardType: TextInputType.text,
-                    textInputAction: TextInputAction.search,
-                    decoration: InputDecoration(
-                      constraints: BoxConstraints(
-                        maxWidth: isPortrait ? double.infinity : 25.w,
-                      ),
-                      hintText: 'البحــث عن قرية او خدمة داخل القرية',
-                      hintTextDirection: TextDirection.rtl,
-                      filled: true,
-                      fillColor: InUseColors.appBarColor,
-                      enabledBorder: const OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: InUseColors.appBarColor,
+                  child: Row(
+                    children: [
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.notifications_none,
+                          size: 35,
+                          color: Colors.green,
                         ),
                       ),
-                      border: const OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: InUseColors.componentsColor,
+                      Expanded(
+                        child: TextField(
+                          textDirection: TextDirection.rtl,
+                          keyboardType: TextInputType.text,
+                          textInputAction: TextInputAction.search,
+                          decoration: InputDecoration(
+                            constraints: BoxConstraints(
+                              maxWidth: isPortrait ? double.infinity : 25.w,
+                            ),
+                            hintText: 'البحــث عن قرية او خدمة داخل القرية',
+                            hintTextDirection: TextDirection.rtl,
+                            filled: true,
+                            fillColor: InUseColors.appBarColor,
+                            enabledBorder: const OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: InUseColors.appBarColor,
+                              ),
+                            ),
+                            border: const OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: InUseColors.componentsColor,
+                              ),
+                            ),
+                            suffixIcon: const Icon(
+                              Icons.search,
+                              color: InUseColors.componentsColor,
+                            ),
+                          ),
                         ),
                       ),
-                      suffixIcon: const Icon(
-                        Icons.search,
-                        color: InUseColors.componentsColor,
-                      ),
-                    ),
+                    ],
                   ),
                 ),
               ),
             ),
             body: ListView(
               children: [
-                CarouselSlider(
+                /*  CarouselSlider(
                   items: listVillages,
                   options: CarouselOptions(
                     autoPlay: true,
@@ -121,8 +135,8 @@ class _ServicesMainScreenState extends State<ServicesMainScreen> {
                       ctrl.changePage(index);
                     }),
                   ),
-                ),
-                Row(
+                ), */
+                /*  Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ClipOval(
@@ -143,7 +157,8 @@ class _ServicesMainScreenState extends State<ServicesMainScreen> {
                       ),
                     ),
                   ],
-                ),
+                ), */
+                listVillages[0],
                 Padding(
                   padding: const EdgeInsets.all(13.0),
                   child: Column(
@@ -241,14 +256,37 @@ class _ServicesMainScreenState extends State<ServicesMainScreen> {
                 ),
               ],
             ),
-            floatingActionButton: FloatingActionButton(
-              heroTag: 'home_button',
-              backgroundColor: Colors.green,
-              child: Icon(
-                CupertinoIcons.home,
-                size: 25.sp,
+            bottomNavigationBar: SizedBox(
+              height: 8.h,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  NavBarItem(
+                    title: "الخدمات",
+                    icon: Icons.dashboard,
+                    heroTag: "service_1",
+                    onPressed: () {},
+                  ),
+                  NavBarItem(
+                    title: "الخدمات",
+                    icon: Icons.dashboard,
+                    heroTag: "service_2",
+                    onPressed: () {},
+                  ),
+                  NavBarItem(
+                    title: "الخدمات",
+                    icon: Icons.dashboard,
+                    heroTag: "service_3",
+                    onPressed: () {},
+                  ),
+                  NavBarItem(
+                    title: "الرئيسية",
+                    icon: CupertinoIcons.home,
+                    heroTag: "home_button",
+                    onPressed: () {},
+                  ),
+                ],
               ),
-              onPressed: () {},
             ),
           );
         }),

@@ -21,15 +21,17 @@ class EducationalServiceCardWidget extends StatelessWidget {
       onTap: onTap ?? () {},
       child: SizedBox(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Flexible(
               child: Card(
                 color: InUseColors.backgroundColor,
-                elevation: 4,
+                elevation: 1,
                 child: Image.asset(
                   imageUrl ?? Assets.worker,
-                  height: 25.h,
-                  width: 50.w,
+                  height: 20.h,
+                  //width: 40.w,
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
@@ -37,7 +39,7 @@ class EducationalServiceCardWidget extends StatelessWidget {
               serviceTitle ?? 'اسم الخدمة غير متاح',
               textAlign: TextAlign.right,
               style: TextStyle(
-                fontSize: 15.6.sp,
+                fontSize: 15.sp,
                 fontWeight: FontWeight.w800,
                 color: InUseColors.componentsColor,
               ),

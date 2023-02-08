@@ -19,20 +19,23 @@ class VillageServiceCardWidget extends StatelessWidget {
         child: Column(
           children: [
             Flexible(
-              child: Card(
-                color: InUseColors.backgroundColor,
-                elevation: 10,
-                child: Image.asset(
-                  imageUrl ?? Assets.worker,
-                ),
+              flex: 0,
+              child: Image.asset(
+                imageUrl ?? Assets.worker,
+                height: 18.h,
+                width: 50.w,
+                fit: BoxFit.cover,
               ),
             ),
-            Text(
-              serviceName ?? 'اسم الخدمة غير متاح',
-              style: TextStyle(
-                fontSize: 17.sp,
-                fontWeight: FontWeight.w600,
-                color: InUseColors.componentsColor,
+            Flexible(
+              flex: 1,
+              child: Text(
+                serviceName ?? 'اسم الخدمة غير متاح',
+                style: TextStyle(
+                  fontSize: 17.sp,
+                  fontWeight: FontWeight.w600,
+                  color: InUseColors.componentsColor,
+                ),
               ),
             ),
           ],

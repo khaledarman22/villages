@@ -1,44 +1,129 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:villages/shared/data/workers.dart';
+import 'package:villages/shared/views/layouts/workers_preview/workers_preview_page.dart';
 
-import 'package:villages/views/village_workers/components/village_worker_card_widget.dart';
+import '../../assets/assets.dart';
+import '../social_services/components/social_service_card_widget.dart';
 
 class VillageWorkersScreen extends StatelessWidget {
-  const VillageWorkersScreen({super.key});
+  const VillageWorkersScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Directionality(
-      textDirection: TextDirection.rtl,
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('عمال القرية'),
-        ),
-        body: ListView.builder(
-          itemCount: 15,
-          itemBuilder: ((context, index) {
-            return const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: VillageWorkerCardWidget(
-                name: 'احمد محمود محمود',
-                specialization: 'كهربائي',
-                phoneNumber: '01018175987',
-              ),
-            );
-          }),
-        ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
-        floatingActionButton: FloatingActionButton(
-          heroTag: 'home_button',
-          backgroundColor: Colors.green,
-          child: Icon(
-            CupertinoIcons.home,
-            size: 25.sp,
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('الحرف والعمال'),
+        centerTitle: true,
+      ),
+      body: Directionality(
+        textDirection: TextDirection.rtl,
+        child: Padding(
+          padding: EdgeInsets.only(top: 1.h),
+          child: GridView.custom(
+            // crossAxisCount: 2,
+            childrenDelegate: SliverChildListDelegate.fixed(
+              [
+                SocialServiceCardWidget(
+                  imageUrl: Assets.elctWorker,
+                  serviceTitle: 'كهربائي',
+                  serviceSubTitle: '',
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (ctx) => WorkersPreviewPage(
+                          pageTitle: "كهربائي",
+                          workers: WorkersData.instance.elcWorkers,
+                        ),
+                      ),
+                    );
+                  },
+                ),
+                SocialServiceCardWidget(
+                  imageUrl: Assets.builderWorker,
+                  serviceTitle: 'سباك',
+                  serviceSubTitle: '',
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (ctx) => WorkersPreviewPage(
+                          pageTitle: "سباك",
+                          workers: WorkersData.instance.plambers,
+                        ),
+                      ),
+                    );
+                  },
+                ),
+                SocialServiceCardWidget(
+                  imageUrl: Assets.shop,
+                  serviceTitle: "نجار",
+                  serviceSubTitle: '',
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (ctx) => WorkersPreviewPage(
+                          pageTitle: "نجار",
+                          workers: WorkersData.instance.carpenters,
+                        ),
+                      ),
+                    );
+                  },
+                ),
+                SocialServiceCardWidget(
+                  imageUrl: Assets.transactions,
+                  serviceTitle: 'مبلط',
+                  serviceSubTitle: '',
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (ctx) => WorkersPreviewPage(
+                          pageTitle: "مبلط",
+                          workers: WorkersData.instance.grounder,
+                        ),
+                      ),
+                    );
+                  },
+                ),
+                SocialServiceCardWidget(
+                  imageUrl: Assets.playground,
+                  serviceTitle: 'نقاش',
+                  serviceSubTitle: '',
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (ctx) => WorkersPreviewPage(
+                          pageTitle: "نقاش",
+                          workers: WorkersData.instance.painter,
+                        ),
+                      ),
+                    );
+                  },
+                ),
+                SocialServiceCardWidget(
+                  imageUrl: Assets.transactions,
+                  serviceTitle: 'سائق',
+                  serviceSubTitle: '',
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (ctx) => WorkersPreviewPage(
+                          pageTitle: "سائق",
+                          workers: WorkersData.instance.drivers,
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              childAspectRatio: .85,
+              crossAxisCount: 2,
+              mainAxisSpacing: 15,
+            ),
           ),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
         ),
       ),
     );

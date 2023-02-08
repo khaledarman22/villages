@@ -23,23 +23,24 @@ class MedicalServiceCardWidget extends StatelessWidget {
         child: Column(
           children: [
             Flexible(
-              child: Card(
-                color: InUseColors.backgroundColor,
-                elevation: 4,
-                child: Image.asset(
-                  imageUrl ?? Assets.worker,
-                  fit: BoxFit.fill,
-                  height: 20.h,
-                ),
+              flex: 0,
+              child: Image.asset(
+                imageUrl ?? Assets.worker,
+                fit: BoxFit.cover,
+                height: 18.h,
+                width: 50.w,
               ),
             ),
-            Text(
-              serviceTitle ?? 'اسم الخدمة غير متاح',
-              textAlign: TextAlign.right,
-              style: TextStyle(
-                fontSize: 15.6.sp,
-                fontWeight: FontWeight.w800,
-                color: InUseColors.componentsColor,
+            Flexible(
+              flex: 1,
+              child: Text(
+                serviceTitle ?? 'اسم الخدمة غير متاح',
+                textAlign: TextAlign.right,
+                style: TextStyle(
+                  fontSize: 15.6.sp,
+                  fontWeight: FontWeight.w800,
+                  color: InUseColors.componentsColor,
+                ),
               ),
             ),
             Text(
