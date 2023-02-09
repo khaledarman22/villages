@@ -188,22 +188,32 @@ class _ServicesMainScreenState extends State<ServicesMainScreen> {
                   child: GridView.count(
                     crossAxisCount: isPortrait ? 2 : 3,
                     childAspectRatio: 2,
-                    children: const [
-                      ServicesCardWidget(
+                    children: [
+                      const ServicesCardWidget(
                         serviceName: 'مدرسة أبو النجا',
                         serviceImageURL: Assets.school,
                       ),
-                      ServicesCardWidget(
+                      const ServicesCardWidget(
                         serviceName: 'مواصلات النقل',
                         serviceImageURL: Assets.transactions,
                       ),
                       ServicesCardWidget(
                         serviceName: 'مستشفى البلد',
                         serviceImageURL: Assets.hospital,
+                        onTap: () {
+                          Navigator.of(context).pushNamed(
+                            AppRouter.villageHospitalPage.name!,
+                          );
+                        },
                       ),
                       ServicesCardWidget(
                         serviceName: 'إسعافات سريعة',
                         serviceImageURL: Assets.fastEmergency,
+                        onTap: () {
+                          Navigator.of(context).pushNamed(
+                            AppRouter.emergencyPage.name!,
+                          );
+                        },
                       ),
                     ],
                   ),

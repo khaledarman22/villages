@@ -29,4 +29,12 @@ class Assets {
   static const school2 = "assets/images/school_2.png";
   static const school3 = "assets/images/school_3.png";
   static const bonesDoctor = "assets/images/bones_doctor.png";
+  static const childCare = "assets/images/child_care.png";
+  static const doctorCare = "assets/images/doctor_care.png";
+  static const carePr = "assets/images/care_pr.png";
+  static const orthopedicCuate = "assets/images/orthopedic_cuate.png";
+  static const tDoctor = "assets/images/t_doctor.png";
+  static const bloodCuate = "assets/images/blood_cuate.png";
+  static const surgeryRafiki = "assets/images/surgery_rafiki.png";
+  static const emergencyCall = "assets/images/emergency_call.png";
 }

@@ -9,35 +9,40 @@ class ServicesCardWidget extends StatelessWidget {
     Key? key,
     this.serviceName,
     this.serviceImageURL,
+    this.onTap,
   }) : super(key: key);
   final String? serviceName;
   final String? serviceImageURL;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(8),
-      width: 50,
-      height: 20,
+    return InkWell(
+      onTap: onTap ?? () {},
       child: Container(
-        width: 40,
+        padding: const EdgeInsets.all(8),
+        width: 50,
         height: 20,
-        color: InUseColors.appBarColor,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Image.asset(
-              serviceImageURL ?? Assets.appTesting,
-              width: 20.w,
-            ),
-            Text(
-              serviceName ?? 'no name',
-              style: const TextStyle(
-                color: InUseColors.componentsColor,
-                fontWeight: FontWeight.bold,
+        child: Container(
+          width: 40,
+          height: 20,
+          color: InUseColors.appBarColor,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Image.asset(
+                serviceImageURL ?? Assets.appTesting,
+                width: 20.w,
               ),
-            )
-          ],
+              Text(
+                serviceName ?? 'no name',
+                style: const TextStyle(
+                  color: InUseColors.componentsColor,
+                  fontWeight: FontWeight.bold,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

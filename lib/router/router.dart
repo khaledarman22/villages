@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:villages/router/routing_model.dart';
+import 'package:villages/views/village_hospital/village_hospital_page.dart';
 import 'package:villages/views/welcoming/splash_screen.dart';
 import 'package:villages/views/welcoming/welcome_screen.dart';
 
 import '../views/educational_services/educational_services_view.dart';
+import '../views/emergency/emergency_view.dart';
+import '../views/emergency/emergency_view.dart';
 import '../views/medical_services/medical_services_view.dart';
 import '../views/selected_village_screen/selected_village_screen_view.dart';
 import '../views/services_main_screen/services_main_screen_view.dart';
@@ -45,8 +48,16 @@ class AppRouter {
     page: const SocialServicesScreen(),
   );
   static final villageWorkersScreen = RoutingModel(
-    name: '/villageWorkersScreen ',
+    name: '/villageWorkersScreen',
     page: const VillageWorkersScreen(),
+  );
+  static final villageHospitalPage = RoutingModel(
+    name: '/villageHospitalPage',
+    page: const VillageHospitalPage(),
+  );
+  static final emergencyPage = RoutingModel(
+    name: '/emergencyPage',
+    page: const EmergencyPage(),
   );
 
   static final Map<String, Widget Function(BuildContext)> routes = {}
@@ -76,5 +87,11 @@ class AppRouter {
     )
     ..addAll(
       villageWorkersScreen.toRoute,
+    )
+    ..addAll(
+      emergencyPage.toRoute,
+    )
+    ..addAll(
+      villageHospitalPage.toRoute,
     );
 }

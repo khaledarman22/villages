@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:villages/router/router.dart';
 import 'package:villages/views/medical_services/components/medical_service_card_widget.dart';
 
 import '../../assets/assets.dart';
@@ -30,7 +31,11 @@ class MedicalServicesScreen extends StatelessWidget {
                 imageUrl: Assets.pCare,
                 serviceTitle: 'طوارئ رأس الخليج',
                 serviceSubTitle: '',
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).pushNamed(
+                    AppRouter.emergencyPage.name!,
+                  );
+                },
               ),
               MedicalServiceCardWidget(
                 imageUrl: Assets.doctors,
@@ -42,7 +47,11 @@ class MedicalServicesScreen extends StatelessWidget {
                 imageUrl: Assets.hospital,
                 serviceTitle: "مستشفى البلد",
                 serviceSubTitle: "",
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).pushNamed(
+                    AppRouter.villageHospitalPage.name!,
+                  );
+                },
               ),
             ],
           ),
