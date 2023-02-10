@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
       builder: (context, orientation, screenType) {
         return MaterialApp(
           title: 'Village',
+          debugShowCheckedModeBanner: false,
           theme: ThemeData(
             backgroundColor: InUseColors.backgroundColor,
             scaffoldBackgroundColor: InUseColors.backgroundColor,

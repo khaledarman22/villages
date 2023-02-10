@@ -10,6 +10,8 @@ import 'package:villages/views/services_main_screen/components/services_card_wid
 import 'package:villages/views/services_main_screen/components/village_info_widget.dart';
 
 import '../../controller/services_main_screen/services_main_screen_controller.dart';
+import '../../shared/data/teachers.dart';
+import '../../shared/views/layouts/school_preview/school_preview_page.dart';
 // import model
 
 class ServicesMainScreen extends StatefulWidget {
@@ -189,9 +191,19 @@ class _ServicesMainScreenState extends State<ServicesMainScreen> {
                     crossAxisCount: isPortrait ? 2 : 3,
                     childAspectRatio: 2,
                     children: [
-                      const ServicesCardWidget(
+                      ServicesCardWidget(
                         serviceName: 'مدرسة أبو النجا',
                         serviceImageURL: Assets.school,
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (ctx) => SchoolPreviewPage(
+                                pageTitle: 'مدرسة ممدوح ابوالنجا إعدادي',
+                                teachers: TeacherData.i.rasSecondSchool2,
+                              ),
+                            ),
+                          );
+                        },
                       ),
                       const ServicesCardWidget(
                         serviceName: 'مواصلات النقل',
@@ -242,6 +254,16 @@ class _ServicesMainScreenState extends State<ServicesMainScreen> {
                       Directionality(
                         textDirection: TextDirection.rtl,
                         child: ListTile(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (ctx) => SchoolPreviewPage(
+                                  pageTitle: 'مدرسة الخليج الثانوية',
+                                  teachers: TeacherData.i.rasFinalSchool,
+                                ),
+                              ),
+                            );
+                          },
                           tileColor: InUseColors.appBarColor,
                           title: const Text(
                             'مدرسة الخليج الثانوية',
@@ -255,7 +277,9 @@ class _ServicesMainScreenState extends State<ServicesMainScreen> {
                               color: InUseColors.componentsColor,
                             ),
                           ),
-                          trailing: Image.asset(Assets.school),
+                          trailing: Image.asset(
+                            Assets.school,
+                          ),
                         ),
                       ),
                       SizedBox(

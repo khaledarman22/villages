@@ -29,6 +29,7 @@ class TeacherData {
       subject: "اللغة الانجليزية",
       educationalLevel: "الإبتدائية",
       rating: 4.5,
+      gander: 1,
     ),
     TeacherModel(
       name: "عبدالسلام الشاذلي",
@@ -53,6 +54,7 @@ class TeacherData {
       subject: "دراسات",
       educationalLevel: "الإبتدائية",
       rating: 4.5,
+      gander: 1,
     ),
   ];
   List<TeacherModel> rasPrepSchoolMamdoh = [
@@ -99,18 +101,21 @@ class TeacherData {
       subject: "اللغة الانجليزية",
       educationalLevel: "الإبتدائية",
       rating: 4.5,
+      gander: 1,
     ),
     TeacherModel(
       name: "مني السيد احمد عنتر",
       subject: "رياضيات",
       educationalLevel: "الإبتدائية",
       rating: 4.5,
+      gander: 1,
     ),
     TeacherModel(
       name: "نهاد منصور محمود فياض",
       subject: "علوم",
       educationalLevel: "الإبتدائية",
       rating: 4.5,
+      gander: 1,
     ),
     TeacherModel(
       name: "محمود النبوي الشرباصي",
@@ -149,6 +154,7 @@ class TeacherData {
       subject: "علوم",
       educationalLevel: "الإعدادية",
       rating: 4.5,
+      gander: 1,
     ),
     TeacherModel(
       name: "محمد حسين",
@@ -167,6 +173,7 @@ class TeacherData {
       subject: "حاسب الى",
       educationalLevel: "الإعدادية",
       rating: 4.5,
+      gander: 1,
     ),
   ];
   List<TeacherModel> rasSecondSchool2 = [
@@ -199,6 +206,7 @@ class TeacherData {
       subject: "علوم",
       educationalLevel: "الإعدادية",
       rating: 4.5,
+      gander: 1,
     ),
     TeacherModel(
       name: "محمود شتا",
@@ -217,6 +225,7 @@ class TeacherData {
       subject: "حاسب الى",
       educationalLevel: "الإعدادية",
       rating: 4.5,
+      gander: 1,
     ),
   ];
   List<TeacherModel> rasFinalSchoolAzhar = [
@@ -263,18 +272,21 @@ class TeacherData {
       subject: "اللغة الانجليزية",
       educationalLevel: "الثانوية",
       rating: 4.5,
+      gander: 1,
     ),
     TeacherModel(
       name: "أم هاشم ناجي",
       subject: "رياضيات",
       educationalLevel: "الثانوية",
       rating: 4.5,
+      gander: 1,
     ),
     TeacherModel(
       name: "أم هاشم ناجي",
       subject: "محاسبة",
       educationalLevel: "الثانوية",
       rating: 4.5,
+      gander: 1,
     ),
     TeacherModel(
       name: "محمد طاهر",
@@ -287,18 +299,21 @@ class TeacherData {
       subject: "تسويق",
       educationalLevel: "الثانوية",
       rating: 4.5,
+      gander: 1,
     ),
     TeacherModel(
       name: "عزة الجنايني",
       subject: "اللغة الفرنسية",
       educationalLevel: "الثانوية",
       rating: 4.5,
+      gander: 1,
     ),
     TeacherModel(
       name: "ام هاشم ناجي",
       subject: "قوانين عمل",
       educationalLevel: "الثانوية",
       rating: 4.5,
+      gander: 1,
     ),
   ];
   List<TeacherModel> rasFinalSchool = [
@@ -355,6 +370,7 @@ class TeacherData {
       subject: "الأحياء",
       educationalLevel: "الثانوية",
       rating: 4.5,
+      gander: 1,
     ),
     TeacherModel(
       name: "مجدي الصعب",
@@ -373,18 +389,21 @@ class TeacherData {
       subject: "الجيولوجيا",
       educationalLevel: "الثانوية",
       rating: 4.5,
+      gander: 1,
     ),
     TeacherModel(
       name: "هبة عنتر",
       subject: "فلسفه",
       educationalLevel: "الثانوية",
       rating: 4.5,
+      gander: 1,
     ),
     TeacherModel(
       name: "هبة عنتر",
       subject: "علم نفس",
       educationalLevel: "الثانوية",
       rating: 4.5,
+      gander: 1,
     ),
     TeacherModel(
       name: "محمود القللي",

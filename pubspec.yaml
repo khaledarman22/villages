@@ -21,6 +21,7 @@ dependencies:
     flutter_svg: ^1.1.6
     ## carousel
     carousel_slider: ^4.2.1
+    date_time_format: ^2.0.1
 
 dev_dependencies:
     flutter_test:

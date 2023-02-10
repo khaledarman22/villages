@@ -4,6 +4,7 @@ class TeacherModel {
   final String? educationalLevel;
   final double? rating;
   final String? imageUrl;
+  final int? gander;
 
   TeacherModel({
     this.name,
@@ -11,5 +12,6 @@ class TeacherModel {
     this.educationalLevel,
     this.rating,
     this.imageUrl,
+    this.gander = 0,
   });
 }

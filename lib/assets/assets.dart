@@ -37,4 +37,7 @@ class Assets {
   static const bloodCuate = "assets/images/blood_cuate.png";
   static const surgeryRafiki = "assets/images/surgery_rafiki.png";
   static const emergencyCall = "assets/images/emergency_call.png";
+  static const doctorFace = "assets/images/doctor_face.png";
+  static const teacherMan = "assets/images/teacher_man.png";
+  static const teacherWoman = "assets/images/teacher_woman.png";
 }

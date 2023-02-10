@@ -88,8 +88,13 @@ class TeacherSchoolCard extends StatelessWidget {
               padding: const EdgeInsets.all(
                 10,
               ),
-              child: Image.asset(
-                Assets.school3,
+              child: CircleAvatar(
+                radius: 75,
+                backgroundImage: AssetImage(
+                  teacher!.gander == 0
+                      ? Assets.teacherMan
+                      : Assets.teacherWoman,
+                ),
               ),
             ),
           ),

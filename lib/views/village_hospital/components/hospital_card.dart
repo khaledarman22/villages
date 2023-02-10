@@ -19,14 +19,16 @@ class HospitalCard extends StatelessWidget {
   }
   //vars
   final String? title;
-  final void Function()? onTap;
+  final void Function(BuildContext ctx)? onTap;
   final String? imageAssets;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(15),
       child: InkWell(
-        onTap: onTap ?? () {},
+        onTap: () {
+          onTap?.call(context);
+        },
         child: Column(
           children: [
             Flexible(

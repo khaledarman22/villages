@@ -17,48 +17,49 @@ class MedicalServicesScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: EdgeInsets.only(top: 12.h),
-        child: GridView.custom(
-          // crossAxisCount: 2,
-          childrenDelegate: SliverChildListDelegate.fixed(
-            [
-              MedicalServiceCardWidget(
-                imageUrl: Assets.fastEmergency,
-                serviceTitle: 'إسعافات سريعـــة',
-                serviceSubTitle: '',
-                onTap: () {},
-              ),
-              MedicalServiceCardWidget(
-                imageUrl: Assets.pCare,
-                serviceTitle: 'طوارئ رأس الخليج',
-                serviceSubTitle: '',
-                onTap: () {
-                  Navigator.of(context).pushNamed(
-                    AppRouter.emergencyPage.name!,
-                  );
-                },
-              ),
-              MedicalServiceCardWidget(
-                imageUrl: Assets.doctors,
-                serviceTitle: 'الدكاترة الخصوصية',
-                serviceSubTitle: '',
-                onTap: () {},
-              ),
-              MedicalServiceCardWidget(
-                imageUrl: Assets.hospital,
-                serviceTitle: "مستشفى البلد",
-                serviceSubTitle: "",
-                onTap: () {
-                  Navigator.of(context).pushNamed(
-                    AppRouter.villageHospitalPage.name!,
-                  );
-                },
-              ),
-            ],
-          ),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            childAspectRatio: .85,
-            crossAxisCount: 2,
-            mainAxisSpacing: 15,
+        child: Directionality(
+          textDirection: TextDirection.rtl,
+          child: GridView.custom(
+            // crossAxisCount: 2,
+            childrenDelegate: SliverChildListDelegate.fixed(
+              [
+                MedicalServiceCardWidget(
+                  imageUrl: Assets.hospital,
+                  serviceTitle: "مستشفى البلد",
+                  serviceSubTitle: "",
+                  onTap: () {
+                    Navigator.of(context).pushNamed(
+                      AppRouter.villageHospitalPage.name!,
+                    );
+                  },
+                ),
+                MedicalServiceCardWidget(
+                  imageUrl: Assets.fastEmergency,
+                  serviceTitle: "الإسعاف و الطوارئ",
+                  serviceSubTitle: '',
+                  onTap: () {
+                    Navigator.of(context).pushNamed(
+                      AppRouter.emergencyPage.name!,
+                    );
+                  },
+                ),
+                MedicalServiceCardWidget(
+                  imageUrl: Assets.doctors,
+                  serviceTitle: 'الدكاترة الخصوصية',
+                  serviceSubTitle: '',
+                  onTap: () {
+                    Navigator.of(context).pushNamed(
+                      AppRouter.spcialDoctorsPage.name!,
+                    );
+                  },
+                ),
+              ],
+            ),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              childAspectRatio: .85,
+              crossAxisCount: 2,
+              mainAxisSpacing: 15,
+            ),
           ),
         ),
       ),

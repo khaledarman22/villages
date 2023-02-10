@@ -6,11 +6,11 @@ import 'package:villages/views/welcoming/welcome_screen.dart';
 
 import '../views/educational_services/educational_services_view.dart';
 import '../views/emergency/emergency_view.dart';
-import '../views/emergency/emergency_view.dart';
 import '../views/medical_services/medical_services_view.dart';
 import '../views/selected_village_screen/selected_village_screen_view.dart';
 import '../views/services_main_screen/services_main_screen_view.dart';
 import '../views/social_services/social_services_view.dart';
+import '../views/spcial_doctors/spcial_doctors_view.dart';
 import '../views/village_re/village_review.dart';
 import '../views/village_workers/village_workers_view.dart';
 
@@ -59,6 +59,10 @@ class AppRouter {
     name: '/emergencyPage',
     page: const EmergencyPage(),
   );
+  static final spcialDoctorsPage = RoutingModel(
+    name: '/spcialDoctorsPage',
+    page: const SpcialDoctorsPage(),
+  );
 
   static final Map<String, Widget Function(BuildContext)> routes = {}
     ..addAll(
@@ -90,6 +94,9 @@ class AppRouter {
     )
     ..addAll(
       emergencyPage.toRoute,
+    )
+    ..addAll(
+      spcialDoctorsPage.toRoute,
     )
     ..addAll(
       villageHospitalPage.toRoute,

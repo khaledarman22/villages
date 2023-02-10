@@ -5,6 +5,9 @@ import 'package:villages/assets/colors.dart';
 import 'package:villages/shared/data/hospital_sp.dart';
 import 'package:villages/views/village_hospital/components/hospital_card.dart';
 
+import '../../shared/data/hospital_doctor.dart';
+import '../../shared/views/layouts/hospital_doctors_preview/hospital_doctors_preview_page.dart';
+
 class VillageHospitalPage extends StatefulWidget {
   const VillageHospitalPage({Key? key}) : super(key: key);
 
@@ -70,14 +73,34 @@ class _VillageHospitalPageState extends State<VillageHospitalPage> {
             endIndent: 4.w,
           ),
           Row(
-            children: const [
+            children: [
               HospitalCard(
                 title: 'الاطفال',
                 imageAssets: Assets.childCare,
+                onTap: (ctx) {
+                  Navigator.of(ctx).push(
+                    MaterialPageRoute(
+                      builder: (ctx) => HospitalDoctorsPreviewPage(
+                        title: 'الاطفال',
+                        doctors: HospitalDoctorData.childDoctors,
+                      ),
+                    ),
+                  );
+                },
               ),
               HospitalCard(
                 title: "الباطنة",
                 imageAssets: Assets.doctorCare,
+                onTap: (ctx) {
+                  Navigator.of(ctx).push(
+                    MaterialPageRoute(
+                      builder: (ctx) => HospitalDoctorsPreviewPage(
+                        title: "الباطنة",
+                        doctors: HospitalDoctorData.insiderDoctors,
+                      ),
+                    ),
+                  );
+                },
               ),
             ],
           ),
