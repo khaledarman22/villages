@@ -40,4 +40,11 @@ class Assets {
   static const doctorFace = "assets/images/doctor_face.png";
   static const teacherMan = "assets/images/teacher_man.png";
   static const teacherWoman = "assets/images/teacher_woman.png";
+  static const phoneIcon = "assets/images/phone_icon.png";
+  static const helpIcon = "assets/images/help_icon.png";
+  static const linkedinIcon = "assets/images/linkedin_icon.png";
+  static const facebookIcon = "assets/images/facebook_icon.png";
+  static const whatsappIcon = "assets/images/whatsapp_icon.png";
+  static const cancelOperation = "assets/images/cancel_operation.png";
+  static const doneOperation = "assets/images/done_operation.png";
 }

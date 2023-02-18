@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:villages/shared/data/emergency.dart';
+import 'package:villages/shared/views/components/navbar_in_use.dart';
 import 'package:villages/views/emergency/components/emergency_card.dart';
 
 import '../../assets/colors.dart';
@@ -41,6 +42,9 @@ class EmergencyPage extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: const NavbarInUse(
+        page: 2,
       ),
     );
   }

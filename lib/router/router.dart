@@ -4,9 +4,13 @@ import 'package:villages/views/village_hospital/village_hospital_page.dart';
 import 'package:villages/views/welcoming/splash_screen.dart';
 import 'package:villages/views/welcoming/welcome_screen.dart';
 
+import '../views/app_helping/app_helping_view.dart';
+import '../views/connect_with_us/connect_with_us_view.dart';
 import '../views/educational_services/educational_services_view.dart';
 import '../views/emergency/emergency_view.dart';
+import '../views/know_more_au/know_more_au_view.dart';
 import '../views/medical_services/medical_services_view.dart';
+import '../views/notification/notification_view.dart';
 import '../views/selected_village_screen/selected_village_screen_view.dart';
 import '../views/services_main_screen/services_main_screen_view.dart';
 import '../views/social_services/social_services_view.dart';
@@ -63,6 +67,22 @@ class AppRouter {
     name: '/spcialDoctorsPage',
     page: const SpcialDoctorsPage(),
   );
+  static final appHelpingPage = RoutingModel(
+    name: '/appHelpingPage',
+    page: const AppHelpingPage(),
+  );
+  static final knowMoreAUPage = RoutingModel(
+    name: '/knowMoreAUPage',
+    page: const KnowMoreAUPage(),
+  );
+  static final connectWithUsPage = RoutingModel(
+    name: '/connectWithUsPage',
+    page: const ConnectWithUsPage(),
+  );
+  static final notificationPage = RoutingModel(
+    name: '/notificationPage',
+    page: const NotificationPage(),
+  );
 
   static final Map<String, Widget Function(BuildContext)> routes = {}
     ..addAll(
@@ -96,9 +116,21 @@ class AppRouter {
       emergencyPage.toRoute,
     )
     ..addAll(
+      notificationPage.toRoute,
+    )
+    ..addAll(
       spcialDoctorsPage.toRoute,
     )
     ..addAll(
       villageHospitalPage.toRoute,
+    )
+    ..addAll(
+      appHelpingPage.toRoute,
+    )
+    ..addAll(
+      knowMoreAUPage.toRoute,
+    )
+    ..addAll(
+      connectWithUsPage.toRoute,
     );
 }

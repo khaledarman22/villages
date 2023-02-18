@@ -43,10 +43,10 @@ class VillageInfoWidget extends StatelessWidget {
               8.0,
             ),
             child: Align(
-              alignment: Alignment.topRight,
+              alignment: Alignment.topCenter,
               child: SizedBox(
-                width: isPortrait ? 56.w : 28.w,
-                height: isPortrait ? 6.5.h : 8.h,
+                width: isPortrait ? 54.w : 28.w,
+                height: isPortrait ? 6.4.h : 8.h,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -101,12 +101,19 @@ class VillageInfoWidget extends StatelessWidget {
             ),
             child: Align(
               alignment:
-                  isPortrait ? Alignment.bottomRight : Alignment.bottomCenter,
+                  isPortrait ? Alignment.bottomCenter : Alignment.bottomCenter,
               child: ElevatedButton(
                 onPressed: knowMoreOnPressed ?? () {},
                 style: ElevatedButton.styleFrom(
-                  minimumSize:
-                      isPortrait ? Size(25.w, 30) : Size(double.infinity, 6.h),
+                  minimumSize: isPortrait
+                      ? Size(
+                          25.w,
+                          30,
+                        )
+                      : Size(
+                          double.infinity,
+                          6.h,
+                        ),
                   backgroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(
