@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:villages/router/router.dart';
-import 'package:villages/shared/data/supermarkets.dart';
-import 'package:villages/shared/views/layouts/super_market/super_market_page.dart';
 
 import '../../assets/assets.dart';
-import 'components/social_service_card_widget.dart';
+import '../../shared/data/supermarkets.dart';
+import '../../shared/views/layouts/super_market/super_market_page.dart';
+import 'components/sport_club_card_widget.dart';
+// import model
 
-class SocialServicesScreen extends StatelessWidget {
-  const SocialServicesScreen({super.key});
+class SportClubPage extends StatelessWidget {
+  const SportClubPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('الخدمات الإجتماعية'),
+        title: const Text(
+          'النادي الرياضى',
+        ),
         centerTitle: true,
       ),
       body: Directionality(
@@ -25,25 +27,21 @@ class SocialServicesScreen extends StatelessWidget {
             // crossAxisCount: 2,
             childrenDelegate: SliverChildListDelegate.fixed(
               [
-                SocialServiceCardWidget(
-                  imageUrl: Assets.adobeFactory,
-                  serviceTitle: 'مصنع طوب أحمر',
+                SportClubCardWidget(
+                  imageUrl: Assets.playingPing,
+                  serviceTitle: 'تنس طاولة',
                   serviceSubTitle: '',
                   onTap: () {},
                 ),
-                SocialServiceCardWidget(
-                  imageUrl: Assets.builderWorker,
-                  serviceTitle: 'الحرف والعمال',
+                SportClubCardWidget(
+                  imageUrl: Assets.bingoPlayer,
+                  serviceTitle: 'بلياردو',
                   serviceSubTitle: '',
-                  onTap: () {
-                    Navigator.of(context).pushNamed(
-                      AppRouter.villageWorkersScreen.name!,
-                    );
-                  },
+                  onTap: () {},
                 ),
-                SocialServiceCardWidget(
-                  imageUrl: Assets.shop,
-                  serviceTitle: "المحلات",
+                SportClubCardWidget(
+                  imageUrl: Assets.playingFootball,
+                  serviceTitle: "كرة القدم",
                   serviceSubTitle: '',
                   onTap: () {
                     Navigator.of(context).push(
@@ -55,21 +53,23 @@ class SocialServicesScreen extends StatelessWidget {
                     );
                   },
                 ),
-                SocialServiceCardWidget(
-                  imageUrl: Assets.transactions,
-                  serviceTitle: 'وسائل التنقل',
+                SportClubCardWidget(
+                  imageUrl: Assets.gym,
+                  serviceTitle: "رفع الاثقال",
                   serviceSubTitle: '',
                   onTap: () {},
                 ),
-                SocialServiceCardWidget(
-                  imageUrl: Assets.playground,
-                  serviceTitle: 'النادي الرياضي',
+                SportClubCardWidget(
+                  imageUrl: Assets.cyberPlayer,
+                  serviceTitle: 'العاب الالكترونية',
                   serviceSubTitle: '',
-                  onTap: () {
-                    Navigator.of(context).pushNamed(
-                      AppRouter.sportClubPage.name!,
-                    );
-                  },
+                  onTap: () {},
+                ),
+                SportClubCardWidget(
+                  imageUrl: Assets.playingChess,
+                  serviceTitle: 'شطرنج',
+                  serviceSubTitle: '',
+                  onTap: () {},
                 ),
               ],
             ),

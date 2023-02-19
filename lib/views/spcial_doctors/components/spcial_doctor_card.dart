@@ -36,7 +36,7 @@ class SpcialDoctorCard extends StatelessWidget {
               to: doctor!.tomorrow!.fromFormatted(),
               from: doctor!.tomorrow!.fromFormatted(),
               isActive: doctor!.tomorrow!.avilable,
-              size: const Size(70, 135),
+              size: const Size(64, 130),
             ),
           ),
           AppointmentCard(
@@ -44,7 +44,7 @@ class SpcialDoctorCard extends StatelessWidget {
             to: doctor!.today!.toFormatted(),
             from: doctor!.today!.fromFormatted(),
             isActive: doctor!.today!.avilable,
-            size: const Size(70, 135),
+            size: const Size(64, 130),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -57,12 +57,19 @@ class SpcialDoctorCard extends StatelessWidget {
                   fontSize: 15,
                 ),
               ),
-              Text(
-                doctor!.specialization!,
-                style: const TextStyle(
-                  color: Colors.green,
-                  fontWeight: FontWeight.w900,
-                  fontSize: 15,
+              SizedBox(
+                width: 35.w,
+                child: Text(
+                  doctor!.specialization!,
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
+                  softWrap: true,
+                  style: const TextStyle(
+                    color: Colors.green,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 14,
+                  ),
                 ),
               ),
               Row(
@@ -72,7 +79,7 @@ class SpcialDoctorCard extends StatelessWidget {
                     style: const TextStyle(
                       color: Colors.green,
                       fontWeight: FontWeight.w900,
-                      fontSize: 15,
+                      fontSize: 14,
                     ),
                   ),
                   const Icon(
@@ -80,15 +87,33 @@ class SpcialDoctorCard extends StatelessWidget {
                     color: Colors.amber,
                   )
                 ],
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                      25,
+                    ),
+                  ),
+                  backgroundColor: InUseColors.submitIconColor,
+                ),
+                child: const Text(
+                  'إحجز',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14,
+                  ),
+                ),
               )
             ],
           ),
           const CircleAvatar(
-            radius: 40,
+            radius: 35,
             backgroundImage: AssetImage(
               Assets.doctorFace,
             ),
-          )
+          ),
         ],
       ),
     );

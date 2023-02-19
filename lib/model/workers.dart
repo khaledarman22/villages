@@ -5,6 +5,7 @@ class WorkerModel {
   final String? specialization;
   final String? workTime;
   final String? imageUrl;
+  final double? rate;
   WorkerModel({
     this.name,
     this.phone,
@@ -12,5 +13,6 @@ class WorkerModel {
     this.specialization,
     this.workTime,
     this.imageUrl,
+    this.rate,
   });
 }

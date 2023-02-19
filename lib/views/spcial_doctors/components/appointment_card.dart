@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../shared/views/components/test_com.dart';
+import '../../../shared/views/components/painter_shape.dart';
 
 class AppointmentCard extends StatelessWidget {
   const AppointmentCard({

@@ -15,6 +15,7 @@ import '../views/selected_village_screen/selected_village_screen_view.dart';
 import '../views/services_main_screen/services_main_screen_view.dart';
 import '../views/social_services/social_services_view.dart';
 import '../views/spcial_doctors/spcial_doctors_view.dart';
+import '../views/sport_club/sport_club_view.dart';
 import '../views/village_re/village_review.dart';
 import '../views/village_workers/village_workers_view.dart';
 
@@ -83,6 +84,10 @@ class AppRouter {
     name: '/notificationPage',
     page: const NotificationPage(),
   );
+  static final sportClubPage = RoutingModel(
+    name: '/sportClubPage',
+    page: const SportClubPage(),
+  );
 
   static final Map<String, Widget Function(BuildContext)> routes = {}
     ..addAll(
@@ -90,6 +95,9 @@ class AppRouter {
     )
     ..addAll(
       welcomeScreen.toRoute,
+    )
+    ..addAll(
+      sportClubPage.toRoute,
     )
     ..addAll(
       villageReviewScreen.toRoute,

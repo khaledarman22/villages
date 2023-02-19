@@ -1,19 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:villages/model/hospital_doctor.dart';
+import 'package:villages/shared/views/layouts/make_apointment/make_apointment_page.dart';
 
 import '../../../assets/assets.dart';
 import '../../../assets/colors.dart';
 
 class HospitalDoctorCard extends StatelessWidget {
-  const HospitalDoctorCard({Key? key, this.doctor}) : super(key: key);
+  const HospitalDoctorCard({
+    Key? key,
+    this.doctor,
+    this.onTap,
+  }) : super(key: key);
   final HospitalDoctorModel? doctor;
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 20.h,
-      margin: const EdgeInsets.all(25),
-      padding: const EdgeInsets.all(10),
+      margin: const EdgeInsets.all(
+        25,
+      ),
+      padding: const EdgeInsets.all(
+        10,
+      ),
       decoration: BoxDecoration(
         color: InUseColors.appBarColor,
         borderRadius: BorderRadius.circular(
@@ -61,6 +71,31 @@ class HospitalDoctorCard extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+                ElevatedButton(
+                  onPressed: onTap ??
+                      () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => MakeAppointmentPage(),
+                          ),
+                        );
+                      },
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(
+                        25,
+                      ),
+                    ),
+                    backgroundColor: InUseColors.submitIconColor,
+                  ),
+                  child: const Text(
+                    'إحجز',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                    ),
+                  ),
                 )
               ],
             ),

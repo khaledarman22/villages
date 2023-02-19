@@ -42,7 +42,7 @@ class VillageWorkersScreen extends StatelessWidget {
                   },
                 ),
                 SocialServiceCardWidget(
-                  imageUrl: Assets.builderWorker,
+                  imageUrl: Assets.plamersWorkers,
                   serviceTitle: 'سباك',
                   serviceSubTitle: '',
                   onTap: () {
@@ -57,7 +57,7 @@ class VillageWorkersScreen extends StatelessWidget {
                   },
                 ),
                 SocialServiceCardWidget(
-                  imageUrl: Assets.shop,
+                  imageUrl: Assets.carpinterWorkers,
                   serviceTitle: "نجار",
                   serviceSubTitle: '',
                   onTap: () {
@@ -72,7 +72,7 @@ class VillageWorkersScreen extends StatelessWidget {
                   },
                 ),
                 SocialServiceCardWidget(
-                  imageUrl: Assets.transactions,
+                  imageUrl: Assets.ciramicWorkers,
                   serviceTitle: 'مبلط',
                   serviceSubTitle: '',
                   onTap: () {
@@ -87,7 +87,7 @@ class VillageWorkersScreen extends StatelessWidget {
                   },
                 ),
                 SocialServiceCardWidget(
-                  imageUrl: Assets.playground,
+                  imageUrl: Assets.painterWorkers,
                   serviceTitle: 'نقاش',
                   serviceSubTitle: '',
                   onTap: () {

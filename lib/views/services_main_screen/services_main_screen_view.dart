@@ -147,9 +147,13 @@ class _ServicesMainScreenState extends State<ServicesMainScreen> {
                       crossAxisCount: isPortrait ? 2 : 3,
                       childAspectRatio: 2,
                       children: [
-                        const ServicesCardWidget(
+                        ServicesCardWidget(
                           serviceName: 'مواصلات النقل',
                           serviceImageURL: Assets.transactions,
+                          onTap: () {
+                            Navigator.of(context).pushReplacementNamed(
+                                AppRouter.selectedVillageScreen.name!);
+                          },
                         ),
                         ServicesCardWidget(
                           serviceName: 'مدرسة أبو النجا',

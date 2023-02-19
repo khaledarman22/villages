@@ -1,4 +1,4 @@
-import 'package:date_time_format/date_time_format.dart';
+import 'package:intl/intl.dart';
 
 class HospitalDoctorModel {
   final String? name;
@@ -19,13 +19,11 @@ class AppointmentModel {
   final DateTime? to;
   final bool? avilable;
 
-  toFormatted() => DateTimeFormat.format(
+  toFormatted() => DateFormat('h:m a').format(
         to!,
-        format: 'h:i a',
       );
-  fromFormatted() => DateTimeFormat.format(
+  fromFormatted() => DateFormat('h:m a').format(
         to!,
-        format: 'h:i a',
       );
 
   AppointmentModel({

@@ -47,4 +47,15 @@ class Assets {
   static const whatsappIcon = "assets/images/whatsapp_icon.png";
   static const cancelOperation = "assets/images/cancel_operation.png";
   static const doneOperation = "assets/images/done_operation.png";
+  static const carpinterWorkers = "assets/images/carpinter_workers.png";
+  static const ciramicWorkers = "assets/images/ciramic_workers.png";
+  static const painterWorkers = "assets/images/painter_workers.png";
+  static const plamersWorkers = "assets/images/plamers_workers.png";
+  static const welcoming = "assets/images/welcoming.png";
+  static const playingPing = "assets/images/playing_ping.png";
+  static const playingFootball = "assets/images/playing_football.png";
+  static const playingChess = "assets/images/playing_chess.png";
+  static const gym = "assets/images/gym.png";
+  static const bingoPlayer = "assets/images/bingo_player.png";
+  static const cyberPlayer = "assets/images/cyber_player.png";
 }

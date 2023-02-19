@@ -3,8 +3,8 @@ import 'package:villages/model/hospital_doctor.dart';
 class SpcialDoctorData {
   static List<DoctorModelWithAppointment> doctors = [
     DoctorModelWithAppointment(
-      name: 'محمد الشبراوي',
-      specialization: 'امراض القلب',
+      name: 'محمد جمال',
+      specialization: 'أخصائى باطنة وجهاز هضمى',
       rating: 4.5,
       today: AppointmentModel(
         avilable: true,
@@ -18,8 +18,8 @@ class SpcialDoctorData {
       ),
     ),
     DoctorModelWithAppointment(
-      name: 'محمد الشبراوي',
-      specialization: 'امراض القلب',
+      name: "إبراهيم إسماعيل",
+      specialization: "أخصائى الباطنة والاطفال",
       rating: 4.5,
       today: AppointmentModel(
         avilable: true,
@@ -33,8 +33,8 @@ class SpcialDoctorData {
       ),
     ),
     DoctorModelWithAppointment(
-      name: 'محمد الشبراوي',
-      specialization: 'امراض القلب',
+      name: "محمد فضل",
+      specialization: "جلدية",
       rating: 4.5,
       today: AppointmentModel(
         avilable: false,
@@ -48,8 +48,8 @@ class SpcialDoctorData {
       ),
     ),
     DoctorModelWithAppointment(
-      name: 'محمد الشبراوي',
-      specialization: 'امراض القلب',
+      name: "إسلام عبد النبى",
+      specialization: "جلدية",
       rating: 4.5,
       today: AppointmentModel(
         avilable: false,

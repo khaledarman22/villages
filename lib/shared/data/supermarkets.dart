@@ -42,5 +42,17 @@ class SupermarketsData {
       name: "ماركت الفلاح",
       rate: 5,
     ),
+    SupermarketModel(
+      name: "ماركت العطار",
+      rate: 5,
+    ),
+    SupermarketModel(
+      name: "ماركت نور",
+      rate: 5,
+    ),
+    SupermarketModel(
+      name: "ماركت حسين المهراني",
+      rate: 5,
+    ),
   ];
 }
