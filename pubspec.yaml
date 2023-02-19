@@ -12,16 +12,15 @@ environment:
 dependencies:
     flutter:
         sdk: flutter
+        ## getting icons from it
     cupertino_icons: ^1.0.5
     ## provider to manage the state
     provider: ^6.0.5 
-    ## sizer to manage screen
+    ## sizer to make screen responsive
     responsive_sizer: ^3.1.1
     ## navbar
     curved_navigation_bar: ^1.0.3
-    ## carousel
-    carousel_slider: ^4.2.1
-
+    ## to create datetime format
     intl: ^0.18.0
 
 dev_dependencies:

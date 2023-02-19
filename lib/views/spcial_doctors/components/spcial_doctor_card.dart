@@ -5,6 +5,7 @@ import 'package:villages/views/spcial_doctors/components/appointment_card.dart';
 
 import '../../../assets/assets.dart';
 import '../../../assets/colors.dart';
+import '../../../shared/views/layouts/make_apointment/make_apointment_page.dart';
 
 class SpcialDoctorCard extends StatelessWidget {
   const SpcialDoctorCard({
@@ -89,7 +90,13 @@ class SpcialDoctorCard extends StatelessWidget {
                 ],
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => MakeAppointmentPage(),
+                    ),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(

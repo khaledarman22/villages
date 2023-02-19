@@ -4,6 +4,7 @@ import 'package:villages/model/workers.dart';
 
 import '../../../assets/assets.dart';
 import '../../../assets/colors.dart';
+import '../layouts/make_apointment/make_apointment_page.dart';
 
 class WorkerCard extends StatelessWidget {
   const WorkerCard({
@@ -129,7 +130,14 @@ class WorkerCard extends StatelessWidget {
                     style: textStyle,
                   ),
                   ElevatedButton(
-                    onPressed: onTap ?? () {},
+                    onPressed: onTap ??
+                        () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (_) => MakeAppointmentPage(),
+                            ),
+                          );
+                        },
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(

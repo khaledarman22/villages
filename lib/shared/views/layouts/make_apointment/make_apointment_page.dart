@@ -164,62 +164,62 @@ class MakeAppointmentPage extends StatelessWidget {
                   ),
                   child: ElevatedButton(
                     onPressed: () {
-                      if (_formKey.currentState!.validate()) {}
-
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          duration: const Duration(
-                            milliseconds: 9500,
-                          ),
-                          behavior: SnackBarBehavior.floating,
-                          dismissDirection: DismissDirection.up,
-                          margin: EdgeInsets.only(
-                            bottom: 75.h,
-                            left: 4.w,
-                            right: 4.w,
-                          ),
-                          backgroundColor:
-                              InUseColors.componentsColor.withOpacity(
-                            0.76,
-                          ),
-                          content: Directionality(
-                            textDirection: TextDirection.rtl,
-                            child: SizedBox(
-                              height: 4.h,
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  const Icon(
-                                    Icons.check,
-                                    color: Colors.white,
-                                    size: 30,
-                                  ),
-                                  const Text(
-                                    'تم الحفظ بنجاح',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                  IconButton(
-                                    onPressed: () {
-                                      ScaffoldMessenger.of(context)
-                                          .hideCurrentSnackBar();
-                                    },
-                                    icon: const Icon(
-                                      Icons.close,
+                      if (_formKey.currentState!.validate()) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            duration: const Duration(
+                              milliseconds: 9500,
+                            ),
+                            behavior: SnackBarBehavior.floating,
+                            dismissDirection: DismissDirection.up,
+                            margin: EdgeInsets.only(
+                              bottom: 75.h,
+                              left: 4.w,
+                              right: 4.w,
+                            ),
+                            backgroundColor:
+                                InUseColors.componentsColor.withOpacity(
+                              0.76,
+                            ),
+                            content: Directionality(
+                              textDirection: TextDirection.rtl,
+                              child: SizedBox(
+                                height: 4.h,
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    const Icon(
+                                      Icons.check,
                                       color: Colors.white,
                                       size: 30,
                                     ),
-                                  ),
-                                ],
+                                    const Text(
+                                      'تم الحفظ بنجاح',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                    IconButton(
+                                      onPressed: () {
+                                        ScaffoldMessenger.of(context)
+                                            .hideCurrentSnackBar();
+                                      },
+                                      icon: const Icon(
+                                        Icons.close,
+                                        color: Colors.white,
+                                        size: 30,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      );
+                        );
+                      }
                     },
                     style: ElevatedButton.styleFrom(
                       minimumSize: const Size(
