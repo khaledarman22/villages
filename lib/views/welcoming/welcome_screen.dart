@@ -48,7 +48,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 activeButtonText: 'ابدأ الأن',
                 onPressedActiveButton: () {
                   Navigator.of(context).pushReplacementNamed(
-                    AppRouter.servicesMainScreen.name!,
+                    AppRouter.loginView.name!,
                   );
                 },
                 welcomeTitle: 'قرية رأس الخليج البلد ',

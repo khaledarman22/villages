@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:villages/router/routing_model.dart';
+import 'package:villages/views/edit_password/edit_password.dart';
+import 'package:villages/views/edit_phone_num/edit_phone_num.dart';
+import 'package:villages/views/edit_profile/edit_profile.dart';
+import 'package:villages/views/login_view/login_view.dart';
+import 'package:villages/views/reset_password/add_new_password.dart';
+import 'package:villages/views/reset_password/reset_password_view.dart';
+import 'package:villages/views/reset_password/verfiy_view.dart';
+import 'package:villages/views/sign_up_view/sign_up_view.dart';
 import 'package:villages/views/village_hospital/village_hospital_page.dart';
 import 'package:villages/views/welcoming/splash_screen.dart';
 import 'package:villages/views/welcoming/welcome_screen.dart';
@@ -27,6 +35,38 @@ class AppRouter {
   static final welcomeScreen = RoutingModel(
     name: '/welcome',
     page: const WelcomeScreen(),
+  );
+  static final loginView = RoutingModel(
+    name: '/login',
+    page: const LoginView(),
+  );
+  static final signUpView = RoutingModel(
+    name: '/signUpView',
+    page: const SignUpView(),
+  );
+  static final resetPasswordView = RoutingModel(
+    name: '/resetPasswordView',
+    page: const ResetPasswordView(),
+  );
+  static final addNewPassword = RoutingModel(
+    name: '/addNewPassword',
+    page: const AddNewPassword(),
+  );
+  static final verifyView = RoutingModel(
+    name: '/verifyView',
+    page: const VerifyView(),
+  );
+  static final editPhoneNum = RoutingModel(
+    name: '/editPhoneNum',
+    page: const EditPhoneNum(),
+  );
+  static final editPasswordView = RoutingModel(
+    name: '/editPasswordView',
+    page: const EditPasswordView(),
+  );
+  static final editProfileView = RoutingModel(
+    name: '/editProfileView',
+    page: const EditProfileView(),
   );
   static final villageReviewScreen = RoutingModel(
     name: '/villageReviewScreen',
@@ -95,6 +135,30 @@ class AppRouter {
     )
     ..addAll(
       welcomeScreen.toRoute,
+    )
+    ..addAll(
+      signUpView.toRoute,
+    )
+    ..addAll(
+      loginView.toRoute,
+    )
+    ..addAll(
+      editPhoneNum.toRoute,
+    )
+    ..addAll(
+      editProfileView.toRoute,
+    )
+    ..addAll(
+      resetPasswordView.toRoute,
+    )
+    ..addAll(
+      editPasswordView.toRoute,
+    )
+    ..addAll(
+      addNewPassword.toRoute,
+    )
+    ..addAll(
+      verifyView.toRoute,
     )
     ..addAll(
       sportClubPage.toRoute,
