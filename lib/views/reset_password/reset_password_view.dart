@@ -54,7 +54,11 @@ class ResetPasswordView extends StatelessWidget {
               height: 2.h,
             ),
             ConstElevatedButton(
+<<<<<<< HEAD
               text: 'استعادة كلمة المرور',
+=======
+              text: 'تسجيل الدخول',
+>>>>>>> 71cbeb961f162ed2f221807e459a55f157dfae4c
               onPressed: () {
                 Navigator.of(context).pushNamed(AppRouter.verifyView.name!);
               },

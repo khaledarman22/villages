@@ -53,7 +53,11 @@ class SignUpView extends StatelessWidget {
               height: 2.h,
             ),
             const ConsttextFormfaild(
+<<<<<<< HEAD
               titleText: 'كلمة المرور',
+=======
+              titleText: 'تأكيد كلمة المرور',
+>>>>>>> 71cbeb961f162ed2f221807e459a55f157dfae4c
               hint: 'يرجى إدخال كلمة المرور',
               icon: Icons.visibility_off_sharp,
             ),
@@ -61,7 +65,11 @@ class SignUpView extends StatelessWidget {
               height: 2.h,
             ),
             const ConsttextFormfaild(
+<<<<<<< HEAD
               titleText: 'تأكيد كلمة المرور',
+=======
+              titleText: 'كلمة المرور',
+>>>>>>> 71cbeb961f162ed2f221807e459a55f157dfae4c
               hint: 'يرجى إدخال كلمة المرور',
               icon: Icons.visibility_off_sharp,
             ),
@@ -69,12 +77,42 @@ class SignUpView extends StatelessWidget {
               height: 3.h,
             ),
             ConstElevatedButton(
+<<<<<<< HEAD
               text: 'اشترك الآن',
+=======
+              text: 'تسجيل الدخول',
+>>>>>>> 71cbeb961f162ed2f221807e459a55f157dfae4c
               onPressed: () {},
             ),
             SizedBox(
               height: 2.h,
             ),
+<<<<<<< HEAD
+=======
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  'اشترك الآن',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                    fontFamily: 'Segoe UI',
+                    color: InUseColors.componentsColor,
+                  ),
+                ),
+                Text(
+                  'ليس لديك حساب؟',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                    fontFamily: 'Segoe UI',
+                    color: InUseColors.hintColor,
+                  ),
+                ),
+              ],
+            ),
+>>>>>>> 71cbeb961f162ed2f221807e459a55f157dfae4c
           ]),
         ),
       ),

@@ -27,6 +27,7 @@ class AppHelpingPage extends StatelessWidget {
             // Image.asset('assets/images/email.png'),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
+<<<<<<< HEAD
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -52,6 +53,38 @@ class AppHelpingPage extends StatelessWidget {
                           color: InUseColors.componentsColor,
                         ),
                       )),
+=======
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Align(
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'أهلاً Asma ',
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: 'Segoe UI',
+                              color: InUseColors.componentsColor,
+                            ),
+                          )),
+                      const Align(
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            ' Asma122@gmail.com ',
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: 'Segoe UI',
+                              color: InUseColors.componentsColor,
+                            ),
+                          )),
+                    ],
+                  ),
+>>>>>>> 71cbeb961f162ed2f221807e459a55f157dfae4c
                 ],
               ),
             ),
@@ -87,7 +120,11 @@ class AppHelpingPage extends StatelessWidget {
               firstIcon: Icons.phone_in_talk_sharp,
             ),
             HelpCardWidget(
+<<<<<<< HEAD
               title: "تسجيل الخروج",
+=======
+              title: "تواصل معنا",
+>>>>>>> 71cbeb961f162ed2f221807e459a55f157dfae4c
               onTap: () {
                 Navigator.of(context).pushNamed(
                   AppRouter.connectWithUsPage.name!,

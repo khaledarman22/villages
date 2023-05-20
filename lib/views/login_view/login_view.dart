@@ -144,12 +144,20 @@ class ConsttextFormfaild extends StatelessWidget {
         TextFormField(
           textAlign: TextAlign.end,
           decoration: InputDecoration(
+<<<<<<< HEAD
             hintText: hint,
             hintStyle: TextStyle(
               color: InUseColors.hintColor,
             ),
             prefixIcon: Icon(icon),
           ),
+=======
+              hintText: hint,
+              hintStyle: TextStyle(
+                color: InUseColors.hintColor,
+              ),
+              prefixIcon: Icon(icon)),
+>>>>>>> 71cbeb961f162ed2f221807e459a55f157dfae4c
         ),
       ],
     );
